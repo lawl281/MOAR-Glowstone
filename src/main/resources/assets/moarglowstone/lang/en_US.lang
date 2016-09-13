@@ -1,0 +1,42 @@
+#English US Language file
+
+#Creative Tab
+itemGroup.glowstone_tab=MOAR Glowstone
+
+#Blocks
+tile.BlockBlackGlowstone.name=Black Glowstone
+tile.BlockBlueGlowstone.name=Blue Glowstone
+tile.BlockBrownGlowstone.name=Brown Glowstone
+tile.BlockCyanGlowstone.name=Cyan Glowstone
+tile.BlockGrayGlowstone.name=Gray Glowstone
+tile.BlockGreenGlowstone.name=Green Glowstone
+tile.BlockLightBlueGlowstone.name=Light Blue Glowstone
+tile.BlockLightGrayGlowstone.name=Light Gray Glowstone
+tile.BlockLimeGlowstone.name=Lime Green Glowstone
+tile.BlockMagentaGlowstone.name=Magenta Glowstone
+tile.BlockOrangeGlowstone.name=Orange Glowstone
+tile.BlockPinkGlowstone.name=Pink Glowstone
+tile.BlockPurpleGlowstone.name=Purple Glowstone
+tile.BlockRedGlowstone.name=Red Glowstone
+tile.BlockWhiteGlowstone.name=White Glowstone
+tile.BlockYellowGlowstone.name=Yellow Glowstone
+
+
+
+#Items
+item.black_glowstone_dust.name=Black Glowstone Dust
+item.blue_glowstone_dust.name=Blue Glowstone Dust
+item.brown_glowstone_dust.name=Brown Glowstone Dust
+item.cyan_glowstone_dust.name=Cyan Glowstone Dust
+item.gray_glowstone_dust.name=Gray Glowstone Dust
+item.green_glowstone_dust.name=Green Glowstone Dust
+item.lightblue_glowstone_dust.name=Light Blue Glowstone Dust
+item.lightgray_glowstone_dust.name=Light Gray Glowstone Dust
+item.lime_glowstone_dust.name=Lime Green Glowstone Dust
+item.magenta_glowstone_dust.name=Magenta Glowstone Dust
+item.orange_glowstone_dust.name=Orange Glowstone Dust
+item.pink_glowstone_dust.name=Pink Glowstone Dust
+item.purple_glowstone_dust.name=Purple Glowstone Dust
+item.red_glowstone_dust.name=Red Glowstone Dust
+item.white_glowstone_dust.name=White Glowstone Dust
+item.yellow_glowstone_dust.name=Yellow Glowstone Dust
