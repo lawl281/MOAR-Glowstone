@@ -2,20 +2,12 @@ package com.lawl281.moarglowstone.registry;
 
 import com.lawl281.moarglowstone.MoarGlowstone;
 import com.lawl281.moarglowstone.Reference;
-import com.lawl281.moarglowstone.item.EnumColorGlowstone;
-import com.lawl281.moarglowstone.item.ItemColorGlowstone;
-import net.minecraft.block.BlockRedstoneComparator;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
-
-import javax.security.auth.RefreshFailedException;
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 
 /**
  * Created by lawl281 on 8/29/2016.
@@ -38,7 +30,7 @@ public class ModItems extends Item{
     public static Item redglowstonedust;
     public static Item whiteglowstonedust;
     public static Item yellowglowstonedust;
-   // public static Item coloredglowstonedust = new ItemColorGlowstone();
+
 
 
     public static void preInit() {
@@ -67,7 +59,6 @@ public class ModItems extends Item{
 
     public static void registerItems() {
 
-        //GameRegistry.register(coloredglowstonedust, new ResourceLocation(Reference.Mod.MODID, "colored_glowstone_dust"));
         GameRegistry.register(blackglowstonedust, new ResourceLocation(Reference.Mod.MODID, "black_glowstone_dust"));
         GameRegistry.register(blueglowstonedust, new ResourceLocation(Reference.Mod.MODID, "blue_glowstone_dust"));
         GameRegistry.register(brownglowstonedust, new ResourceLocation(Reference.Mod.MODID, "brown_glowstone_dust"));
@@ -123,9 +114,7 @@ public class ModItems extends Item{
         registerRender(whiteglowstonedust);
         registerRender(yellowglowstonedust);
 
-        /*for(int i = 0; i < EnumColorGlowstone.values().length; i++){
-            registerRender(coloredglowstonedust, i);
-        }*/
+
 
     }
 
