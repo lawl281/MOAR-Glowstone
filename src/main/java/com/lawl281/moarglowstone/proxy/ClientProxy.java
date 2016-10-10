@@ -1,7 +1,7 @@
 package com.lawl281.moarglowstone.proxy;
 
-import com.lawl281.moarglowstone.registry.ModBlocks;
-import com.lawl281.moarglowstone.registry.ModItems;
+import com.lawl281.moarglowstone.core.ModBlocks;
+import com.lawl281.moarglowstone.core.ModItems;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

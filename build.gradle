@@ -20,9 +20,9 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "1.0"
-group= "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "modid"
+version = "1.1.0"
+group= "com.lawl281.moarglowstone" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "moarglowstone"
 
 sourceCompatibility = targetCompatibility = "1.6" // Need this here so eclipse task generates correctly.
 compileJava {
@@ -84,4 +84,201 @@ processResources
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+}
+
+
+import java.nio.file.Files
+
+def createBlockJSON() {
+    File modelDirectory = new File("./src/main/resources/assets/" + archivesBaseName + "/models")
+    File blockModelDirectory = new File("./src/main/resources/assets/" + archivesBaseName + "/models/block")
+    if(!modelDirectory.exists()) modelDirectory.mkdir()
+    if(!blockModelDirectory.exists()) blockModelDirectory.mkdir()
+
+    File textureDirectory = new File("./src/main/resources/assets/" + archivesBaseName + "/textures/blocks")
+
+    createJSONsForTextures(textureDirectory, "", "block")
+    createIBlockJSON()
+   // createBStateJSON()
+}
+
+def createIBlockJSON() {
+    File modelDirectory = new File("./src/main/resources/assets/" + archivesBaseName + "/models")
+    File blockModelDirectory = new File("./src/main/resources/assets/" + archivesBaseName + "/models/block")
+    if(!modelDirectory.exists()) modelDirectory.mkdir()
+    if(!blockModelDirectory.exists()) blockModelDirectory.mkdir()
+
+    File textureDirectory = new File("./src/main/resources/assets/" + archivesBaseName + "/textures/blocks")
+
+    createJSONsForTextures(textureDirectory, "", "iblock")
+}
+
+def createBStateJSON() {
+    File modelDirectory = new File("./src/main/resources/assets/" + archivesBaseName + "/blockstates")
+    if(!modelDirectory.exists()) modelDirectory.mkdir()
+
+    File textureDirectory = new File("./src/main/resources/assets/" + archivesBaseName + "/textures/blocks")
+
+    createJSONsForTextures(textureDirectory, "", "state")
+
+}
+
+def createItemJSON() {
+    File modelDirectory = new File("./src/main/resources/assets/" + archivesBaseName + "/models")
+    File itemModelDirectory = new File("./src/main/resources/assets/" + archivesBaseName + "/models/item")
+    if(!modelDirectory.exists()) modelDirectory.mkdir()
+    if(!itemModelDirectory.exists()) itemModelDirectory.mkdir()
+
+    File textureDirectory = new File("./src/main/resources/assets/" + archivesBaseName + "/textures/items")
+
+    createJSONsForTextures(textureDirectory, "", "item")
+}
+
+def createJSONsForTextures(File directory, String directoryPath, String type) {
+    for(File file: directory.listFiles()) {
+        if(file.isDirectory()) {
+            String newDirectoryPath = directoryPath;
+
+            String newDirectoryPathFileString
+
+            if(!newDirectoryPath.isEmpty()) {
+                newDirectoryPath += "/"
+            }
+            newDirectoryPath += file.name
+
+            if(type == "item") {
+                newDirectoryPathFileString = ".\\src\\main\\resources\\assets\\" + archivesBaseName + "\\models\\item\\" + newDirectoryPath
+            }
+            if(type == "block") {
+                newDirectoryPathFileString = ".\\src\\main\\resources\\assets\\" + archivesBaseName + "\\models\\block\\" + newDirectoryPath
+            }
+            if(type == "iblock") {
+                newDirectoryPathFileString = ".\\src\\main\\resources\\assets\\" + archivesBaseName + "\\models\\item\\" + newDirectoryPath
+            }
+            if(type == "state") {
+                newDirectoryPathFileString = ".\\src\\main\\resources\\assets\\" + archivesBaseName + "\\blockstates\\" + newDirectoryPath
+            }
+            File newDirectoryPathFile = new File(newDirectoryPathFileString);
+            if(!newDirectoryPathFile.exists()) {
+                newDirectoryPathFile.mkdir();
+            }
+
+            createJSONsForTextures(file, newDirectoryPath, type)
+        } else {
+            String newFileName = file.name
+
+            if (newFileName.startsWith("item")) {
+                newFileName = newFileName.replaceFirst("item", "")
+            }
+            if (newFileName.startsWith("_")) {
+                newFileName = newFileName.replaceFirst("_", "")
+            }
+
+            Files.move(file.toPath(), file.toPath().resolveSibling(newFileName));
+
+            newFileName = newFileName.replace(".png", "")
+            newFileName = newFileName.replace(".mcmeta", "")
+
+            if (!directoryPath.isEmpty() && !(directoryPath.endsWith("\\") || directoryPath.endsWith("/"))) {
+                directoryPath += "\\";
+            }
+            String fileLocation
+            if(type == "item") {
+                fileLocation = ".\\src\\main\\resources\\assets\\" + archivesBaseName + "\\models\\item\\" + directoryPath +
+                        newFileName.toString() + ".json"
+                println(fileLocation)
+            }
+            if(type == "block") {
+                fileLocation = ".\\src\\main\\resources\\assets\\" + archivesBaseName + "\\models\\block\\" + directoryPath +
+                        newFileName.toString() + ".json"
+                println(fileLocation)
+            }
+            if(type == "iblock") {
+                fileLocation = ".\\src\\main\\resources\\assets\\" + archivesBaseName + "\\models\\item\\" + directoryPath +
+                        newFileName.toString() + ".json"
+                println(fileLocation)
+            }
+            if(type == "state") {
+                fileLocation = ".\\src\\main\\resources\\assets\\" + archivesBaseName + "\\blockstates\\" +
+                        newFileName.toString() + ".json"
+                println(fileLocation)
+            }
+            File jsonFile = new File(fileLocation);
+            if (!jsonFile.exists()) {
+                println("Making: " + jsonFile)
+                String jsonString
+                if(type == "item") {
+                    directoryPath = directoryPath.replace("\\", "/")
+                    jsonFile.createNewFile();
+                    jsonString = '''{
+    "parent":"item/generated",
+    "textures":{
+        "layer0":"''' + archivesBaseName + ":items/" + directoryPath + newFileName + '''"
+    },
+    "display": {
+        "thirdperson": {
+            "rotation": [ -90, 0, 0 ],
+            "translation": [ 0, 1, -3 ],
+            "scale": [ 0.55, 0.55, 0.55 ]
+        },
+        "firstperson": {
+            "rotation": [ 0, -135, 25 ],
+            "translation": [ 0, 4, 2 ],
+            "scale": [ 1.7, 1.7, 1.7 ]
+        }
+    }
+}
+'''
+                }
+                if(type == "block") {
+                    directoryPath = directoryPath.replace("\\", "/")
+                    jsonFile.createNewFile();
+                    jsonString = '''{
+    "parent":"block/cube_all",
+    "textures":{
+        "all": "''' + archivesBaseName + ":blocks/" + directoryPath + newFileName + '''"
+    }
+}'''
+                }
+
+                if(type == "iblock") {
+                    directoryPath = directoryPath.replace("\\", "/")
+                    jsonFile.createNewFile();
+                    jsonString = '''{
+    "parent":"block/cube_all",
+    "textures":{
+        "all": "''' + archivesBaseName + ":blocks/" + directoryPath + newFileName + '''"
+    }
+}'''
+                }
+                if(type == "state") {
+                    directoryPath = directoryPath.replace("\\", "/")
+                    jsonFile.createNewFile();
+                    jsonString = '''{
+    "variants":{
+        "normal": { "model": "''' + archivesBaseName + ":" + directoryPath + newFileName + '''" }
+    }
+}'''
+                }
+                jsonFile << jsonString
+            }
+        }
+    }
+}
+
+task makeJSONItems << {
+    createItemJSON();
+    print 'Finished making JSON for existing item textures';
+}
+
+task makeJSONBlocks << {
+    createBlockJSON();
+    print 'finished making JSON for existing block textures';
+}
+
+task makeJSONAll << {
+    createBlockJSON();
+    print 'finished making JSON for existing block textures';
+    createItemJSON();
+    print 'Finished making JSON for existing item textures';
 }

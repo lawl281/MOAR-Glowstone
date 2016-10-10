@@ -3,40 +3,76 @@
 #Creative Tab
 itemGroup.glowstone_tab=MOAR Glowstone
 
-#Blocks
-tile.BlockBlackGlowstone.name=Black Glowstone
-tile.BlockBlueGlowstone.name=Blue Glowstone
-tile.BlockBrownGlowstone.name=Brown Glowstone
-tile.BlockCyanGlowstone.name=Cyan Glowstone
-tile.BlockGrayGlowstone.name=Gray Glowstone
-tile.BlockGreenGlowstone.name=Green Glowstone
-tile.BlockLightBlueGlowstone.name=Light Blue Glowstone
-tile.BlockLightGrayGlowstone.name=Light Gray Glowstone
-tile.BlockLimeGlowstone.name=Lime Green Glowstone
-tile.BlockMagentaGlowstone.name=Magenta Glowstone
-tile.BlockOrangeGlowstone.name=Orange Glowstone
-tile.BlockPinkGlowstone.name=Pink Glowstone
-tile.BlockPurpleGlowstone.name=Purple Glowstone
-tile.BlockRedGlowstone.name=Red Glowstone
-tile.BlockWhiteGlowstone.name=White Glowstone
-tile.BlockYellowGlowstone.name=Yellow Glowstone
+#bricks
+tile.glowstonebrick.black.name=Black Glowstone Brick
+tile.glowstonebrick.blue.name=Blue Glowstone Brick
+tile.glowstonebrick.brown.name=Brown Glowstone Brick
+tile.glowstonebrick.cyan.name=Cyan Glowstone Brick
+tile.glowstonebrick.gray.name=Gray Glowstone Brick
+tile.glowstonebrick.green.name=Green Glowstone Brick
+tile.glowstonebrick.lightblue.name=Light Blue Glowstone Brick
+tile.glowstonebrick.lightgray.name=Light Gray Glowstone Brick
+tile.glowstonebrick.lime.name=Lime Green Glowstone Brick
+tile.glowstonebrick.magenta.name=Magenta Glowstone Brick
+tile.glowstonebrick.orange.name=Orange Glowstone Brick
+tile.glowstonebrick.pink.name=Pink Glowstone Brick
+tile.glowstonebrick.purple.name=Purple Glowstone Brick
+tile.glowstonebrick.red.name=Red Glowstone Brick
+tile.glowstonebrick.white.name=White Glowstone Brick
+tile.glowstonebrick.yellow.name=Yellow Glowstone Brick
+
+#carvedbricks
+tile.carvedglowstonebrick.black.name=Black Carved Glowstone Brick
+tile.carvedglowstonebrick.blue.name=Blue Carved Glowstone Brick
+tile.carvedglowstonebrick.brown.name=Brown Carved Glowstone Brick
+tile.carvedglowstonebrick.cyan.name=Cyan Carved Glowstone Brick
+tile.carvedglowstonebrick.gray.name=Gray Carved Glowstone Brick
+tile.carvedglowstonebrick.green.name=Green Carved Glowstone Brick
+tile.carvedglowstonebrick.lightblue.name=Light Blue Carved Glowstone Brick
+tile.carvedglowstonebrick.lightgray.name=Light Gray Carved Glowstone Brick
+tile.carvedglowstonebrick.lime.name=Lime Green Carved Glowstone Brick
+tile.carvedglowstonebrick.magenta.name=Magenta Carved Glowstone Brick
+tile.carvedglowstonebrick.orange.name=Orange Carved Glowstone Brick
+tile.carvedglowstonebrick.pink.name=Pink Carved Glowstone Brick
+tile.carvedglowstonebrick.purple.name=Purple Carved Glowstone Brick
+tile.carvedglowstonebrick.red.name=Red Carved Glowstone Brick
+tile.carvedglowstonebrick.white.name=White Carved Glowstone Brick
+tile.carvedglowstonebrick.yellow.name=Yellow Carved Glowstone Brick
+
+#blocks
+tile.glowstoneblock.black.name=Black Glowstone
+tile.glowstoneblock.blue.name=Blue Glowstone
+tile.glowstoneblock.brown.name=Brown Glowstone
+tile.glowstoneblock.cyan.name=Cyan Glowstone
+tile.glowstoneblock.gray.name=Gray Glowstone
+tile.glowstoneblock.green.name=Green Glowstone
+tile.glowstoneblock.lightblue.name=Light Blue Glowstone
+tile.glowstoneblock.lightgray.name=Light Gray Glowstone
+tile.glowstoneblock.lime.name=Lime Green Glowstone
+tile.glowstoneblock.magenta.name=Magenta Glowstone
+tile.glowstoneblock.orange.name=Orange Glowstone
+tile.glowstoneblock.pink.name=Pink Glowstone
+tile.glowstoneblock.purple.name=Purple Glowstone
+tile.glowstoneblock.red.name=Red Glowstone
+tile.glowstoneblock.white.name=White Glowstone
+tile.glowstoneblock.yellow.name=Yellow Glowstone
 
 
 
 #Items
-item.black_glowstone_dust.name=Black Glowstone Dust
-item.blue_glowstone_dust.name=Blue Glowstone Dust
-item.brown_glowstone_dust.name=Brown Glowstone Dust
-item.cyan_glowstone_dust.name=Cyan Glowstone Dust
-item.gray_glowstone_dust.name=Gray Glowstone Dust
-item.green_glowstone_dust.name=Green Glowstone Dust
-item.lightblue_glowstone_dust.name=Light Blue Glowstone Dust
-item.lightgray_glowstone_dust.name=Light Gray Glowstone Dust
-item.lime_glowstone_dust.name=Lime Green Glowstone Dust
-item.magenta_glowstone_dust.name=Magenta Glowstone Dust
-item.orange_glowstone_dust.name=Orange Glowstone Dust
-item.pink_glowstone_dust.name=Pink Glowstone Dust
-item.purple_glowstone_dust.name=Purple Glowstone Dust
-item.red_glowstone_dust.name=Red Glowstone Dust
-item.white_glowstone_dust.name=White Glowstone Dust
-item.yellow_glowstone_dust.name=Yellow Glowstone Dust
+item.dusts.black.name=Black Glowstone Dust
+item.dusts.blue.name=Blue Glowstone Dust
+item.dusts.brown.name=Brown Glowstone Dust
+item.dusts.cyan.name=Cyan Glowstone Dust
+item.dusts.gray.name=Gray Glowstone Dust
+item.dusts.green.name=Green Glowstone Dust
+item.dusts.lightblue.name=Light Blue Glowstone Dust
+item.dusts.lightgray.name=Light Gray Glowstone Dust
+item.dusts.lime.name=Lime Green Glowstone Dust
+item.dusts.magenta.name=Magenta Glowstone Dust
+item.dusts.orange.name=Orange Glowstone Dust
+item.dusts.pink.name=Pink Glowstone Dust
+item.dusts.purple.name=Purple Glowstone Dust
+item.dusts.red.name=Red Glowstone Dust
+item.dusts.white.name=White Glowstone Dust
+item.dusts.yellow.name=Yellow Glowstone Dust

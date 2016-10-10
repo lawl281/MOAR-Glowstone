@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "color=black": { "model": "moarglowstone:blocks/blackGlowstone" },
+    "color=blue": { "model": "moarglowstone:blocks/blueGlowstone" },
+    "color=brown": { "model": "moarglowstone:blocks/brownGlowstone" },
+    "color=cyan": { "model": "moarglowstone:blocks/cyanGlowstone" },
+    "color=gray": { "model": "moarglowstone:blocks/grayGlowstone" },
+    "color=green": { "model": "moarglowstone:blocks/greenGlowstone" },
+    "color=lightblue": { "model": "moarglowstone:blocks/lightblueGlowstone" },
+    "color=lightgray": { "model": "moarglowstone:blocks/lightgrayGlowstone" },
+    "color=lime": { "model": "moarglowstone:blocks/limeGlowstone" },
+    "color=magenta": { "model": "moarglowstone:blocks/magentaGlowstone" },
+    "color=orange": { "model": "moarglowstone:blocks/orangeGlowstone" },
+    "color=pink": { "model": "moarglowstone:blocks/pinkGlowstone" },
+    "color=purple": { "model": "moarglowstone:blocks/purpleGlowstone" },
+    "color=red": { "model": "moarglowstone:blocks/redGlowstone" },
+    "color=white": { "model": "moarglowstone:blocks/whiteGlowstone" },
+    "color=yellow": { "model": "moarglowstone:blocks/yellowGlowstone" }
+  }
+}

@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "MoarGlowstone:items/white_glowstone_dust"
-  }
-}
