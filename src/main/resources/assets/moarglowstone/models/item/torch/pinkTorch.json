@@ -1,6 +1,6 @@
 {
-    "parent":"block/cube_all",
+    "parent":"item/generated",
     "textures":{
-        "all": "moarglowstone:blocks/torch/pinkTorch"
+        "layer0": "moarglowstone:blocks/torch/pinkTorch"
     }
 }

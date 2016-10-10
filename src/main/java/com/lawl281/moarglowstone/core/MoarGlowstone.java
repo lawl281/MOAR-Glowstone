@@ -23,9 +23,6 @@ public class MoarGlowstone {
     @SidedProxy(serverSide = Reference.Mod.SERVER_PROXY_CLASS, clientSide = Reference.Mod.CLIENT_PROXY_CLASS)
     public static CommonProxy proxy;
 
-    @Mod.Instance
-    public static MoarGlowstone instance;
-
     public static MoarGlowstoneTab glowstoneTab;
 
 
@@ -36,26 +33,16 @@ public class MoarGlowstone {
         ModBlocks.register();
         ModItems.preInit();
         proxy.preInit(event);
-
     }
 
     @EventHandler
     public void Init (FMLInitializationEvent event) {
-
         proxy.Init(event);
         ModCrafting.register();
-
     }
 
     @EventHandler
     public void postInit (FMLPostInitializationEvent event) {
-
         proxy.postInit(event);
-
-    }
-
-    @EventHandler
-    public void serverLoad (FMLServerStartingEvent event) {
-
     }
 }
