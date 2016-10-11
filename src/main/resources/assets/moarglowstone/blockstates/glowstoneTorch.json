@@ -1,20 +1,37 @@
 {
+  "forge_marker": 1,
+  "defaults": {
+    "textures":{
+      "torch" : "moarglowstone:blocks/torch/blackTorch"
+    },
+    "model": "",
+    "uvlock": false
+  },
   "variants": {
-    "color=black": { "model": "moarglowstone:torch/blackTorch" },
-    "color=blue": { "model": "moarglowstone:torch/blueTorch" },
-    "color=brown": { "model": "moarglowstone:torch/brownTorch" },
-    "color=cyan": { "model": "moarglowstone:torch/cyanTorch" },
-    "color=gray": { "model": "moarglowstone:torch/grayTorch" },
-    "color=green": { "model": "moarglowstone:torch/greenTorch" },
-    "color=lightblue": { "model": "moarglowstone:torch/lightblueTorch" },
-    "color=lightgray": { "model": "moarglowstone:torch/lightgrayTorch" },
-    "color=lime": { "model": "moarglowstone:torch/limeTorch" },
-    "color=magenta": { "model": "moarglowstone:torch/magentaTorch" },
-    "color=orange": { "model": "moarglowstone:torch/orangeTorch" },
-    "color=pink": { "model": "moarglowstone:torch/pinkTorch" },
-    "color=purple": { "model": "moarglowstone:torch/purpleTorch" },
-    "color=red": { "model": "moarglowstone:torch/redTorch" },
-    "color=white": { "model": "moarglowstone:torch/whiteTorch" },
-    "color=yellow": { "model": "moarglowstone:torch/yellowTorch" }
+    "color":{ 
+      "black": { "textures":{ "torch": "moarglowstone:blocks/torch/blackTorch" }},
+      "blue": { "textures":{ "torch": "moarglowstone:blocks/torch/blueTorch" }},
+      "brown": { "textures":{ "torch": "moarglowstone:blocks/torch/brownTorch" }},
+      "cyan": { "textures":{ "torch": "moarglowstone:blocks/torch/cyanTorch" }},
+      "gray": { "textures":{ "torch": "moarglowstone:blocks/torch/grayTorch" }},
+      "green": { "textures":{ "torch": "moarglowstone:blocks/torch/greenTorch" }},
+      "lightblue": { "textures":{ "torch": "moarglowstone:blocks/torch/lightblueTorch" }},
+      "lightgray": { "textures":{ "torch": "moarglowstone:blocks/torch/lightgrayTorch" }},
+      "lime": { "textures":{ "torch": "moarglowstone:blocks/torch/limeTorch" }},
+      "magenta": { "textures":{ "torch": "moarglowstone:blocks/torch/magentaTorch" }},
+      "orange": { "textures":{ "torch": "moarglowstone:blocks/torch/orangeTorch" }},
+      "pink": { "textures":{ "torch": "moarglowstone:blocks/torch/pinkTorch" }},
+      "purple": { "textures":{ "torch": "moarglowstone:blocks/torch/purpleTorch" }},
+      "red": { "textures":{ "torch": "moarglowstone:blocks/torch/redTorch" }},
+      "white": { "textures":{ "torch": "moarglowstone:blocks/torch/whiteTorch" }},
+      "yellow": { "textures":{ "torch": "moarglowstone:blocks/torch/yellowTorch" }}
+    },
+    "facing":{
+      "up": { "model": "torch" },
+      "east": { "model": "torch_wall" },
+      "south": { "model": "torch_wall", "y": 90 },
+      "west": { "model": "torch_wall", "y": 180 },
+      "north": { "model": "torch_wall", "y": 270 }
+    }
   }
 }

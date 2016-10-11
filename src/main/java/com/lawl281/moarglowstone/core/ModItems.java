@@ -20,7 +20,7 @@ public class ModItems extends Item{
     public static ItemBlock coloredGlowstone;
     public static ItemBlock glowstoneBrick;
     public static ItemBlock carvedGlowstoneBrick;
-   // public static ItemBlock glowstoneTorch;
+    public static ItemBlock glowstoneTorch;
 
 
 
@@ -28,7 +28,7 @@ public class ModItems extends Item{
         coloredGlowstone = new ItemMoarGlowstone(ModBlocks.coloredGlowstone);
         glowstoneBrick = new ItemMoarGlowstone(ModBlocks.glowstoneBrick);
         carvedGlowstoneBrick = new ItemMoarGlowstone(ModBlocks.carvedGlowstoneBrick);
-       // glowstoneTorch = new ItemMoarGlowstone(ModBlocks.glowstoneTorch);
+        glowstoneTorch = new ItemMoarGlowstone(ModBlocks.glowstoneTorch);
         registerItems();
     }
 
@@ -37,7 +37,7 @@ public class ModItems extends Item{
         helper.registerIBlock(coloredGlowstone, "coloredGlowstone");
         helper.registerIBlock(glowstoneBrick, "glowstoneBrick");
         helper.registerIBlock(carvedGlowstoneBrick, "carvedGlowstoneBrick");
-       // helper.registerIBlock(glowstoneTorch, "glowstoneTorch");
+        helper.registerIBlock(glowstoneTorch, "glowstoneTorch");
 
 
     }
@@ -48,7 +48,7 @@ public class ModItems extends Item{
             helper.renderItem(coloredGlowstone, i, ":blocks/" + ColorEnum.byMetadata(i).getName() + "Glowstone");
             helper.renderItem(glowstoneBrick, i, ":bricks/" + ColorEnum.byMetadata(i).getName() + "GlowstoneBrick");
             helper.renderItem(carvedGlowstoneBrick, i, ":carved/" + ColorEnum.byMetadata(i).getName() + "CarvedGlowstoneBrick");
-           // helper.renderItem(glowstoneTorch, i, ":torch/" + ColorEnum.values()[i].getName() + "Torch");
+            helper.renderItem(glowstoneTorch, i, ":torch/" + ColorEnum.values()[i].getName() + "Torch");
             helper.registerOreDic("dustGlowstone", new ItemStack(dusts, 1, i));
         }
     }

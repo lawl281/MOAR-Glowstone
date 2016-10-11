@@ -29,14 +29,14 @@ public class ModBlocks {
         coloredGlowstone =new ColoredGlowstone(Material.GLASS);
         glowstoneBrick = new GlowstoneBrick(Material.ROCK);
         carvedGlowstoneBrick = new CarvedGlowstoneBrick(Material.ROCK);
-        //glowstoneTorch = new GlowstoneTorch(Material.ROCK);
+        glowstoneTorch = new GlowstoneTorch();
     }
 
     public static void register() {
         helper.registerBlock(coloredGlowstone);
         helper.registerBlock(glowstoneBrick);
+        helper.registerBlock(glowstoneTorch);
         helper.registerBlock(carvedGlowstoneBrick);
-        //helper.registerBlock(glowstoneTorch);
     }
 
     public static void registerRenders() {
@@ -45,7 +45,7 @@ public class ModBlocks {
             helper.renderBlock(coloredGlowstone, i, ":blocks/" + ColorEnum.values()[i].getName() + "Glowstone");
             helper.renderBlock(glowstoneBrick, i, ":bricks/" + ColorEnum.values()[i].getName() + "GlowstoneBrick");
             helper.renderBlock(carvedGlowstoneBrick, i, ":carved/" + ColorEnum.values()[i].getName() + "CarvedGlowstoneBrick");
-           // helper.renderBlock(glowstoneTorch, i, ":torch/" + ColorEnum.values()[i].getName() + "Torch");
+            helper.renderBlock(glowstoneTorch, i, ":torch/" + ColorEnum.values()[i].getName() + "Torch");
             helper.registerOreDic("glowstone", new ItemStack(coloredGlowstone, 1, i));
         }
     }
